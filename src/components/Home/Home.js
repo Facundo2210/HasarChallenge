@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getUser,getHoroscope} from '../../redux/actions';
+import {getUser} from '../../redux/actions';
 import Spinner from '../Spinner/Spinner';
 import HomeDiv from './styled';
 import {Link} from 'react-router-dom';
@@ -11,7 +11,7 @@ const Home = () => {
 	const user = useSelector((state) => state.users);
 	useEffect(() => {
 		dispatch(getUser());
-		dispatch(getHoroscope());
+		// dispatch(getHoroscope());
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (

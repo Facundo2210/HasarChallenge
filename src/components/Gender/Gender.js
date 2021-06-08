@@ -5,7 +5,7 @@ import female from '../../images/gen-3.png';
 import noBinary from '../../images/gen-2.png';
 import {useHistory} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
-import {updateUser,getHoroscope} from '../../redux/actions';
+import {updateUser} from '../../redux/actions';
 
 const generos = [
 	{img: male, name: 'male'},
@@ -29,11 +29,7 @@ const Gender = () => {
 		dispatch(updateUser({gender: name}));
 		setError(false);
 	};
-		
-	useEffect(() => {
-			dispatch(getHoroscope());
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+
 	
 	return (
 		<GenderDiv>

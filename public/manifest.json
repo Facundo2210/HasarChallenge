@@ -1,6 +1,6 @@
 {
-  "short_name": "Hasar App",
-  "name": "Hasar App",
+  "short_name": "Hasar Challenge",
+  "name": "Hasar Challenge",
      "icons": [
         {
             "src": "/icon-192x192.png",
@@ -23,7 +23,7 @@
             "type": "image/png"
         }
     ],
-  "start_url": "/welcomepwa",
+  "start_url": "/PWA",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

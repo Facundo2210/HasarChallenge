@@ -1,15 +1,13 @@
 import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 import HoroscopeDiv from './styled';
-import {cleanHoroscope} from '../../redux/actions';
 import {userBirthday, matchHoroscope} from '../../utils/auxiliar';
 import Spinner from '../Spinner/Spinner';
 
 const Horoscope = () => {
 	const actualUser = useSelector((state) => state.actualUser);
 	const horoscope = useSelector((state) => state.horoscope);
-	const dispatch = useDispatch();
 	const {name, date} = actualUser,
 		mount = parseInt(date && date.split('-')[1]),
 		days = parseInt(date && date.split('-')[2]),
@@ -17,12 +15,6 @@ const Horoscope = () => {
 		userHoroscope = matchHoroscope(mount, days),
 		userHoroscopeFinish = horoscope[userHoroscope.name];
 
-	useEffect(() => {
-		return () => {
-			dispatch(cleanHoroscope());
-		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
 
 	if (!horoscope || !actualUser || !userHoroscopeFinish) {
 		return (

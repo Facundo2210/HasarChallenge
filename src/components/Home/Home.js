@@ -8,10 +8,7 @@ import {Link} from 'react-router-dom';
 
 const Home = () => {
 	const dispatch = useDispatch();
-
 	const user = useSelector((state) => state.users);
-	const dispatch = useDispatch();
-
 	useEffect(() => {
 		dispatch(getUser());
 		dispatch(getHoroscope());

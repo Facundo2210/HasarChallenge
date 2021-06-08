@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getUser} from '../../redux/actions';
+import {getUser,getHoroscope} from '../../redux/actions';
 import Spinner from '../Spinner/Spinner';
 import HomeDiv from './styled';
 import {Link} from 'react-router-dom';

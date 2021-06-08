@@ -10,9 +10,11 @@ const Home = () => {
 	const dispatch = useDispatch();
 
 	const user = useSelector((state) => state.users);
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(getUser());
+		dispatch(getHoroscope());
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (

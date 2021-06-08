@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import GenderDiv from './styled';
 import male from '../../images/gen-1.png';
 import female from '../../images/gen-3.png';
